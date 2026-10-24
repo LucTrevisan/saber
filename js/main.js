@@ -111,6 +111,12 @@
 
   thumbs.forEach(function (b, i) { b.setAttribute('aria-label', 'Ampliar foto ' + (i + 1) + ' de ' + thumbs.length); });
 
+  var more = document.getElementById('mais-fotos');
+  more.addEventListener('click', function () {
+    thumbs.forEach(function (b) { b.parentNode.hidden = false; });
+    more.parentNode.hidden = true;
+  });
+
   /* ---------- Vídeo na própria página ---------- */
   var reelBox = document.getElementById('reelbox');
   var reelBtn = document.getElementById('open-reel');
